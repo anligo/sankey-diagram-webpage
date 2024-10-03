@@ -3,19 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sankey Diagram</title>
-    <!-- Add Plotly library -->
+    <!-- Load Plotly.js from a CDN if it's not included in the sankey.html -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    <!-- This div will hold the Sankey diagram -->
-    <div id="sankey-diagram"></div>
-
-    <script>
-        // Add the Plotly code to render the Sankey diagram
-        Plotly.d3.json('sankey.html', function(data) {
-            Plotly.newPlot('sankey-diagram', data.data, data.layout);
-        });
-    </script>
+    <!-- Embed the Sankey diagram using an iframe -->
+    <iframe src="sankey.html" width="100%" height="800px" frameborder="0"></iframe>
 </body>
 </html>
